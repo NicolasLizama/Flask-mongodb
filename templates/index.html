@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERREMAS - Comercio Electrónico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0000007a;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77b300 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url(imagenes/168829328_247275537081883_1381693100923974615_n.jpg) no-repeat center center/cover;
+            text-align: center;
+            color: #fffb00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p, .showcase h5 {
+            background-color: #000000be;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .login-form {
+            background: #fff;
+            padding: 30px;
+            margin: 50px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+        }
+        .login-form input[type="text"], 
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: #77b300;
+            border: 0;
+            color: #fff;
+        }
+        footer {
+            background: #333;
+            color: #020101;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">FERREMAS</span> Comercio Electrónico</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="showcase">
+        <div class="container">
+            <h1 style="background-color: #000000be; color: #fff; padding: 10px; border-radius: 5px; display: inline-block;">Bienvenido a FERREMAS</h1>
+            <br></br>
+            <h5 style="background-color: #000000be; color: #fff; padding: 10px; border-radius: 5px; display: inline-block;">Tu tienda de ferretería y construcción en línea</h5>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="login-form">
+            <h2>Iniciar Sesión</h2>
+            <form action="login" method="post">
+                <input type="text" name="username" placeholder="Usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Ingresar">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>FERREMAS &copy; 2024</p>
+    </footer>
+</body>
+</html>

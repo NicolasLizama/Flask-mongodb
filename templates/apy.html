@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERREMAS - Conectar API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0000007a;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77b300 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 30px 0;
+        }
+        footer {
+            background: #333;
+            color: #020101;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">FERREMAS</span> Conectar API</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Conectar con la API</h2>
+            <p>Aquí puedes conectar tu aplicación con la API.</p>
+            <script>
+                document.querySelector('form').addEventListener('submit', async (event) => {
+                    event.preventDefault();
+                    const username = event.target.username.value;
+                    const password = event.target.password.value;
+                    
+                    const response = await fetch('URL_DE_LA_API/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username, password })
+                    });
+                    
+                    const data = await response.json();
+                    if (data.success) {
+                        window.location.href = '/dashboard';
+                    } else {
+                        alert('Nombre de usuario o contraseña incorrectos');
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    <footer>
+        <p>FERREMAS &copy; 2024</p>
+    </footer>
+</body>
+</html>
